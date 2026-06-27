@@ -1,0 +1,19 @@
+# dependências e artefatos (reinstalados/gerados no build)
+node_modules
+**/node_modules/
+public
+.quartz/
+.quartz-cache
+tsconfig.tsbuildinfo
+quartz/cli/tui/dist/
+prof
+
+# o conteúdo vem do repo `notes` (symlink local só p/ dev); nunca commitar
+content
+
+# sistema / editores
+.DS_Store
+.obsidian
+*.log
+.replit
+replit.nix
