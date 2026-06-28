@@ -35,4 +35,9 @@ cp overrides/recent-notes-components-index.js .quartz/plugins/recent-notes/dist/
 cp overrides/recent-notes-index.js            .quartz/plugins/recent-notes/dist/index.js
 
 npx quartz build -d "$CONTENT_DIR" -o "$CONTENT_DIR/public"
-echo "✓ site gerado em $CONTENT_DIR/public"
+
+# Porteiro de senha (Basic Auth) na frente do site — sem Zero Trust/cartão.
+# Em "modo avançado" o Pages roda este _worker.js pra toda requisição.
+cp cf/_worker.js "$CONTENT_DIR/public/_worker.js"
+
+echo "✓ site gerado em $CONTENT_DIR/public (com porteiro _worker.js)"
